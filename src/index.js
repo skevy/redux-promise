@@ -43,7 +43,9 @@ export default function promiseMiddleware({ dispatch }) {
             id: sequenceId
           }
         })
-      ).catch(error => console.error(error));
+      ).catch(error => {
+        console.error(error)
+      });
     }
 
     return next(action);
